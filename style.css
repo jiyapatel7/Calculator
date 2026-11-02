@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    padding: 20px;
+}
+
+.calculator {
+    width: 360px;
+    max-width: 100%;
+    background: #171b26;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 20px;
+}
+
+.header button {
+    background: #292f40;
+    border: none;
+    color: #aaa;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.display {
+    background: #10141e;
+    border-radius: 15px;
+    padding: 20px 15px;
+    text-align: right;
+    margin-bottom: 20px;
+    min-height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.previous {
+    color: #8a91a5;
+    font-size: 15px;
+    min-height: 23px;
+    overflow-wrap: anywhere;
+}
+
+.current {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button.key {
+    height: 62px;
+    border: none;
+    border-radius: 14px;
+    font-size: 21px;
+    font-weight: 600;
+    color: white;
+    background: #292f40;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button.key:hover {
+    filter: brightness(1.25);
+    transform: translateY(-2px);
+}
+
+button.key:active {
+    transform: scale(.94);
+}
+
+.operator {
+    background: #343f59 !important;
+    color: #70c5ff !important;
+}
+
+.special {
+    background: #49354a !important;
+    color: #ff9bd0 !important;
+}
+
+.equal {
+    background: linear-gradient(135deg, #4776e6, #8e54e9) !important;
+    grid-column: span 2;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+.history {
+    margin-top: 20px;
+    color: #bbb;
+    font-size: 13px;
+    max-height: 90px;
+    overflow-y: auto;
+}
+
+.history h4 {
+    margin-bottom: 8px;
+    color: white;
+}
+
+.history-item {
+    padding: 6px 0;
+    border-bottom: 1px solid #303647;
+    overflow-wrap: anywhere;
+}
+
+/* Responsive Design */
+@media(max-width: 400px) {
+    .calculator {
+        padding: 18px;
+    }
+
+    button.key {
+        height: 57px;
+    }
+}
